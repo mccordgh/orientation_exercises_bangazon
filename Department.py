@@ -8,9 +8,7 @@ class Department(object):
         self.name = name
         self.supervisor = supervisor
         self.size = employee_count
-
-    def __str__(self):
-      print("DDDDDDDDDDDD")
+        self.budget = 500000
 
     def get_name(self):
       """Returns the name of the department"""
@@ -21,3 +19,12 @@ class Department(object):
       """Returns the name of the supervisor"""
 
       return self.supervisor
+
+    def get_budget(self):
+      """Returns base budget for Department"""
+      return self.budget
+
+    def meet(self):
+      """Prints meeting place for all employees of this Department"""
+      
+      print("\t{}: \t\tEveryone meet in {}'s offce.".format(self.name, self.supervisor))
